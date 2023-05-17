@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Profile</title>
+    <!-- Favicon - logo in browser tab -->
+    <link rel="icon" type="image/png" href=".static/img/favicon.png"/>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="static/css/homepage.css">
+    <link type="text/css" rel="stylesheet" href="static/css/Ocss.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js" integrity="sha512-wstvQlySDtT//3yKfbxpy8AS5b4UQ0tnItav8dGCVLGO3u/Ymb6mUEgVzDL8a/DXdtiuhsTj2ElDsXQ+E2cDYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Negavation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-4" href="bs_homed.html">
+                <span class="display-6 fs-2 fw-bolder text-pink-medium"><i class="bi bi-briefcase-fill align-text-top me-1"></i>PecanCV</span>
+            </a>       
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item">
+                    <a class="nav-link active disabled fs-4 fw-bold" aria-current="page" href="#">Trang chủ</a>
+                </li>
+                <li class="ps-0 nav-item dropdown d-none d-lg-flex">
+                    <a class="btn ps-0 ps-lg-3 dropdown-toggle text-dark box-hover-opacity box-hover-zoom fs-4" id="NB_Tutorial-dropdown" type="button" data-mdb-toggle="dropdown" aria-expanded="false">Hướng dẫn</a>
+                    <ul class="dropdown-menu NB_Tutorial-dropdown-menu p-1" aria-labelledby="NB_Tutorial-dropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="ps-0 nav-item d-lg-none">
+                    <button data-bs-toggle="collapse" data-bs-target="#collap-tutorial" id="btn-collap-tutorial" class="border-0 bg-secondary-subtle p-0">
+                        <i class="bi bi-caret-right-fill text-pink align-text-bottom"></i>
+                        Hướng dẫn
+                        <i class="bi bi-arrow-bar-down align-text-bottom"></i>
+                    </button>
+                    <div id="collap-tutorial" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Hướng dẫn sử dụng?</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Xây dựng CV?</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Gửi đơn xét tuyển?</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Đăng bài tuyển dụng?</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ps-0 nav-item d-lg-none mt-2 mt-lg-0">
+                    <button data-bs-toggle="collapse" data-bs-target="#collap-user" id="btn-collap-user" class="border-0 bg-secondary-subtle p-0">
+                        <i class="bi bi-person text-pink align-text-bottom"></i>
+                        Xin chào <mark  class="username">Nguyen Van A</mark>
+                    </button>
+                    <div id="collap-user" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Thông tin cá nhân</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Đăng tin tuyển dụng</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a id="signout1" class="text-dark">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="d-none d-lg-flex">
+                <div class="dropdown">
+                    <img src="./static/img/sample.png" id="img" style="width: 50px;" type="button" aria-haspopup="true" aria-expanded="false" class="img-fluid border border-4 rounded-circle dropdown-toggle" data-bs-toggle="dropdown"></img>
+                    <ul class="dropdown-menu text-right dropdown-menu-end mt-1 border border-4 z-1">
+                        <li><h6 class="dropdown-header">Xin chào <mark class="username">Nguyen Van A</mark> </h6></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="recruit.html">Đăng tin tuyển dụng</a></li>
+                        <li><a class="dropdown-item" href="bs_history.html">Lịch Sử đăng bài</a></li>
+                        <li><a class="dropdown-item" id="signout" style="cursor: pointer;">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Negavation -->
+
+    <!-- Content -->
+    <div class="container content-profile py-md-5 z-0 mt-lg-5 py-3">
+        <div class="accordion" id="accordion">
+            <div class="accordion-item bg-linear-pink-light">
+                <h2 class="accordion-header" id="panel1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collap1" aria-expanded="true" aria-controls="panel-collap1">
+                        <span class="font-monospace fw-semibold text-capitalize">Thông tin cá nhân</span>
+                    </button>
+                </h2>
+                <div id="panel-collap1" class="accordion-collapse collapse show" aria-labelledby="panel1" data-bs-parent="#accordion">
+                    <!-- Thông tin cơ bản -->
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-auto d-flex justify-content-center align-items-center">
+                                <img  id="img1" class="img-fluid border rounded" style="height: 150px;" alt="" title="Hinh thẻ người dùng">
+                            </div>
+                            <div class="col-auto mt-1 mt-md-0">
+                                <h3><a class="username"></a></h3>
+                                <small id="email" class="d-block"></small>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-linear-pink-light">
+                <h2 class="accordion-header" id="panel2">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collap2" aria-expanded="true" aria-controls="panel-collap2">
+                        <span class="font-monospace fw-semibold text-capitalize">Thông tin công ty</span>
+                    </button>
+                </h2>
+                <div id="panel-collap2" class="accordion-collapse collapse" aria-labelledby="panel2" data-bs-parent="#accordion">
+                    <!-- Thông tin công ty -->
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-auto d-flex justify-content-center align-items-top">
+                                <img id="img2" class="img-fluid border rounded" style="height: 150px;" alt="" title="Logo công ty">
+                            </div>
+                            <div class="col-auto mt-1 mt-md-0">
+                                <!-- Tên công ty -->
+                                <h3><a id="namecpn"></a></h3>
+                                <!-- Khu vực -->
+                                <small class="mt-1 blockquote-footer" id="place"></small>
+                                <small class="mt-1 blockquote-footer" id="addressUser"></small>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <br>
+                                    <small id="describe"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-linear-pink-light">
+                <h2 class="accordion-header" id="panel3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collap3" aria-expanded="false" aria-controls="panel-collap3">
+                        <span class="font-monospace fw-semibold text-capitalize">Chỉnh sửa thông tin người dùng</span>
+                    </button>
+                </h2>
+                <div id="panel-collap3" class="accordion-collapse collapse" aria-labelledby="panel3" data-bs-parent="#accordion">
+                    <!-- Chỉnh sửa thông tin -->
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="photo" class="form-label mb-0 ms-2 fw-bolder">Thay đổi họ tên</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6 position-relative">
+                                <label for="password" class="d-block form-label mb-0 ms-2 fw-bolder">Mật khẩu cũ</label>
+                                <div class="input-show-pwd-profile text-secondary">
+                                    <i class="far fa-eye" id="togglePassword"></i>
+                                </div>
+                                <input id="password" type="password" class="form-control pe-5" type="text" placeholder="Nhập mật khẩu cũ..." title="" >
+                            </div>
+
+                            <div class="col-md-6 position-relative">
+                                <label for="confirm__password" class="form-label mb-0 ms-2 fw-bolder">Mật khẩu mới</label><span id="message" class="ps-1"></span>
+                                <div class="input-show-pwd-profile text-secondary">
+                                    <i class="far fa-eye" id="togglePasswordComfirm"></i>
+                                </div>
+                                <input id="confirm__password" type="password" class="form-control pe-5" type="text" placeholder="Nhập mật khẩu mới" title="" value="" >
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="btn btn-outline-success" id="update1">Thay đổi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item bg-linear-pink-light">
+                <h2 class="accordion-header" id="panel4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panel-collap4" aria-expanded="false" aria-controls="panel-collap4">
+                        <span class="font-monospace fw-semibold text-capitalize">Chỉnh sửa công ty</span>
+                    </button>
+                </h2>
+                <div id="panel-collap4" class="accordion-collapse collapse" aria-labelledby="panel4" data-bs-parent="#accordion">
+                    <!-- Chỉnh sửa thông tin -->
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="photo" class="form-label mb-0 ms-2 fw-bolder">Tên công ty mới</label>
+                                <input type="text" class="form-control" id="namecpnEdit">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <label for="photo" class="form-label mb-0 ms-2 fw-bolder">Logo công ty mới</label>
+                                <input type="file" class="form-control" id="photo">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 gx-1">
+                            <div class="col-12">
+                                <label for="city" class="form-label mb-1 ms-2 fw-bolder">Thay đổi khu vực</label>
+                            </div>
+                            <div class="col-lg-3 col-5">
+                                <select class="form-select form-select mb-2" id="city" aria-label=".form-select" title="" required>
+                                    <option id="tinh" value="" selected>Chọn tỉnh thành</option>
+                                </select>
+                            </div>
+                            <div class="col-lg col-12">
+                                <input type="text" class="form-control" id="address" placeholder="Nhập số địa chỉ và tên đường mới..." title="" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label for="rf-describe" class="form-label mb-1 ms-2 fw-bolder">Thay đổi mô tả doanh nghiệp</label>
+                                <textarea class="form-control" id="describeEdit" rows="3" placeholder="Miêu tả tổng quan về công ty, chuyên ngành, các đặc điểm nổi bật,..." title="" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <button class="btn btn-outline-success" id="updateButton2">Thay đổi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <footer id="bottom" data-anchor="true" class="bg-pink o_footer mt-auto">
+        <section class="s_text_block p-1 p-md-3">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-md-around">
+                    <div class="col-6 col-md-3">
+                        <ul class="list-group-item list-group-item-action list-control text-white">
+                            <h4>Về chúng tôi - PecanCV</h4>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Giới thiệu</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Tin tức nghề nghiệp</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Tuyển dụng</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Liên hệ</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Hỏi đáp</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Chính sách bảo mật</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Điều khoản dịch vụ</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Quy chế hoạt động</a></li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-5 border-start border-end text-center order-1 order-md-0">
+                        <div class="px-4 text-white">
+                            © 2023-2023 
+                            <p><b class="text-white">Công ty cổ phần PecanCV Việt Nam</b></p>
+                            <b class="text-decoration-underline text-pink-light">Trụ sở HCM:</b>
+                            <p class="font-italic text-pink-light">19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
+                            <b class="text-decoration-underline text-pink-light">Trụ sở Nha Trang:</b>
+                            <p class="font-italic text-pink-light">22 Đ. Nguyễn Đình Chiểu, Vĩnh Phước, Nha Trang, Vĩnh Phước</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3 text-right" id="connect">
+                        <div class="row">
+                            <h4 class="text-white">Thông tin liên hệ</h4>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-telephone-fill text-pink-light" name="mail">
+                                        <span class="strong ps-1 text-pink-light">84+ 123456789</span>  
+                                    </i>
+                                <li>
+                                    <i class="bi bi-mailbox2 text-pink-light" name="mail">
+                                        <span class="strong ps-1 text-pink-light">pecancv.support@gmail.com</span>  
+                                    </i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="include-icon d-flex justify-content-evenly">
+                                <a class="btn btn-link" href="https://www.facebook.com"><i class="bi bi-facebook fs-4 text-primary" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://github.com"><i class="bi bi-github text-dark fs-4" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://www.instagram.com"><i class="bi bi-instagram text-danger-emphasis fs-4" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://youtube.com"><i class="bi bi-youtube fs-4 text-danger" style="line-height: 50%;"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="row text-center mt-3">
+                            <span class="display-6 fs-2 fw-bolder text-pink-light"><i class="bi bi-briefcase-fill align-text-top me-1 text-pink-light"></i>PecanCV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- End Footer -->
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+
+<script src="static/js/profile.js"></script>
+<script type="module" src="../model/bshomedModel.js"></script>
+<script type="module" src="../model/bsPorfile.js"></script>
+<script  type="module"  src="../model/updateBsProfileModel.js"></script>
+<script type="module" src="../model/signoutModel.js"></script>
+<script src="../views/static/js/rendercity.js"></script>
+
+</html>

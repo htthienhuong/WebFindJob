@@ -1,0 +1,9 @@
+:root {
+    --item-color: #efeaea;
+    --bg-color: rgb(255, 255, 255);
+    --decor-color: linear-gradient(to right, #0a0272, #b810ef);
+    --text-color: #797979;
+}
+.avatar {
+    border-radius: 50%;
+}

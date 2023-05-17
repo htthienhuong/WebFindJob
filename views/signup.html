@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+
+    <link rel="icon" type="image/png" href="static/img/favicon.png"/>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="static/css/homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+    <div class="container-fuild" style="height: 5vh;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-md-4 text-pink-medium" href="../index.html">
+                    <span class="display-6 fs-4 fw-bolder"><i class="bi bi-briefcase-fill align-text-bottom me-1"></i>PecanCV</span>
+                </a>
+                <div class="">
+                    <a class="nav-link ps-2 border-start-pink" href="bs_signup.html">
+                        <span class="fw-bolder text-nowrap me-md-3"><i class="bi bi-pen align-text-top me-1"></i>Nhà tuyển dụng</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+    </div>
+    <div class="row row-cols-2 bg-pink-light ps-1 m-auto pt-4" style="height: 95vh;">
+        <div class="col-lg-5 col-12 d-flex px-md-5 px-2">
+            <div class="container align-self-center px-0 px-md-5 px-lg-0">
+                <div class="header-signup">
+                    <h2>Đăng ký ứng viên mới</h2>
+                    <p class="text-muted">
+                        Trở thành 
+                        <span class="text-pink-strong fw-bolder">Pecaner</span> 
+                        để tìm kiếm các nhà tuyển dụng uy tín và công việc thích hợp trong chớp mắt
+                    </p>
+                </div>
+
+                <div id="signup-rep" class="bg-danger-subtle fw-semibold mb-2 p-2 fst-italic d-none"></div>
+                
+                <div class="form-floating mb-2 box-shadow rounded">
+                    <input type="text" class="form-control ps-3" id="fullname" name="fullname" placeholder=" ">
+                    <label for="fullname" class="ms-1">
+                        <i class="bi bi-person-fill align-text-top pe-1"></i>
+                        Họ và tên
+                    </label>
+                </div>
+                <div class="form-floating mb-2 box-shadow rounded">
+                    <input type="email" class="form-control ps-3" id="email" name="email" placeholder=" ">
+                    <label for="email" class="ms-1">
+                        <i class="bi bi-envelope-fill align-text-top pe-1"></i>
+                        Email
+                    </label>
+                </div>
+                <div class="form-floating mb-2 box-shadow rounded">
+                    <input type="password" class="form-control ps-3 pe-md-5 me-5" id="password" name="password" placeholder=" " onkeyup='check();'>
+                    <label for="password" class="ms-1">
+                        <i class="bi bi-shield-lock-fill align-text-top pe-1"></i>
+                        Mật khẩu
+                        <span id='messagepwd'></span>
+                    </label>
+                    <div class="input-show-pwd text-secondary">
+                        <i class="far fa-eye" id="togglePassword"></i>
+                    </div>
+                </div>
+                <div class="form-floating mb-2 box-shadow rounded">
+                    <input type="password" class="form-control ps-3 pe-5" id="confirm__password" placeholder=" " onkeyup='check();'>
+                    <label for="confirm__password" class="ms-1">
+                        <i class="bi bi-shield-fill-check align-text-top pe-1"></i>
+                        Nhập lại mật khẩu
+                        <span id='message'></span>
+                    </label>
+                    <div class="input-show-pwd text-secondary">
+                        <i class="far fa-eye" id="togglePasswordComfirm"></i>
+                    </div>
+                </div>
+                <div class="">
+                    <p class="ms-1"><span class="text-danger">*</span>Bằng việc đăng ký tài khoản, bạn đã đồng ý với <a href="#" class="text-pink-strong fw-bolder">Điều khoản dịch vụ</a> và <a href="#" class="text-pink-strong fw-bolder">Chính sách bảo mật</a> của chúng tôi.</p>
+                    <button type="submit" id="signUp" class="btn btn-success w-100 box-shadow">
+                        Hoàn thành
+                        <i class="bi bi-rocket-takeoff-fill align-text-top"></i>
+                    </button>
+                </div>
+       
+                <hr class="mt-4">
+                <div class="">
+                    <p>
+                        Đăng nhập bằng tài khoản mạng xã hội?
+                        <a href="signin.html" class="text-pink-strong fw-semibold text-decoration-none">Đăng nhập ngay</a>
+                    </p>
+                    <p>
+                        Bạn đã có tài khoản?
+                        <a href="signin.html" class="text-pink-strong fw-semibold text-decoration-none">Đăng nhập ngay</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-7 d-none d-lg-flex bg-pink-light px-0 d-flex align-items-end justify-content-end" >
+            <img src="./static/img/job1.png" class="img-fluid rounded-top-circle rounded-end-0 w-100 border border-3 border-end-0 border-bottom-0" style="height: 95%">
+        </div>
+    </div>
+
+    <div class="modal bg-opacity-75 bg-secondary" tabindex="-1" id="process-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="progress">
+                    <div class="progress-bar-striped text-bg-pink text-center" role="progressbar" id="process-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../model/signupModel.js"></script>
+<script src="static/js/signup.js"></script>
+</html>
+<!-- Checked -->

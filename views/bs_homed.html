@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <!-- Favicon - logo in browser tab -->
+    <link rel="icon" type="image/png" href="static/img/favicon.png"/>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="static/css/homepage.css">
+    <link type="text/css" rel="stylesheet" href="static/css/Ocss.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js" integrity="sha512-wstvQlySDtT//3yKfbxpy8AS5b4UQ0tnItav8dGCVLGO3u/Ymb6mUEgVzDL8a/DXdtiuhsTj2ElDsXQ+E2cDYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Thanh điều hướng Negavation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary z-1">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-4" href="homed.html">
+                <span class="display-6 fs-4 fw-bolder text-pink-medium box-hover-opacity-medium box-hover-zoom-trans-short"><i class="bi bi-briefcase-fill align-text-bottom me-1 text-pink-medium"></i>PecanCV</span>
+            </a>       
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item">
+                    <a class="nav-link active disabled fs-5 fw-bold" aria-current="page" href="#">Trang chủ</a>
+                </li>
+                <li class="ps-0 nav-item dropdown d-none d-lg-flex box-hover-opacity box-hover-zoom-light">
+                    <a class="btn ps-0 ps-lg-3 dropdown-toggle text-dark fs-5" id="NB_Tutorial-dropdown" type="button" data-mdb-toggle="dropdown" aria-expanded="false">Hướng dẫn</a>
+                    <ul class="dropdown-menu NB_Tutorial-dropdown-menu p-1" aria-labelledby="NB_Tutorial-dropdown">
+                        <li><a class="dropdown-item" href="#" value="hướng dẫn sử dụng" onclick="how_rep(this)">Hướng dẫn sử dụng?</a></li>
+                        <li><a class="dropdown-item" href="#" value="hướng dẫn tạo CV" onclick="how_rep(this)">Tạo CV?</a></li>
+                        <li><a class="dropdown-item" href="#" value="hướng dẫn chỉnh sửa thông tin" onclick="how_rep(this)">Chỉnh sửa thông tin?</a></li>
+                        <li><a class="dropdown-item" href="#" value="hướng dẫn ứng tuyển" onclick="how_rep(this)">Ứng tuyển?</a></li>
+                        <li><a class="dropdown-item" href="#" value="hướng dẫn xem lịch sử ứng tuyển" onclick="how_rep(this)">Lịch sử ứng tuyển?</a></li>
+                    </ul>
+                </li>
+                <li class="ps-0 nav-item d-lg-none">
+                    <button data-bs-toggle="collapse" data-bs-target="#collap-tutorial" id="btn-collap-tutorial" class="border-0 bg-secondary-subtle p-0">
+                        <i class="bi bi-caret-right-fill text-pink align-text-top"></i>
+                        Hướng dẫn
+                        <i class="bi bi-arrow-bar-down align-text-top"></i>
+                    </button>
+                    <div id="collap-tutorial" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark text-decoration-none" value="hướng dẫn sử dụng" onclick="how_rep(this)">Hướng dẫn sử dụng?</a>
+                            </li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark text-decoration-none" value="hướng dẫn tạo CV" onclick="how_rep(this)">Tạo CV?</a>
+                            </li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark text-decoration-none" value="hướng dẫn chỉnh sửa thông tin" onclick="how_rep(this)">Chỉnh sửa thông tin?</a>
+                            </li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark text-decoration-none" value="hướng dẫn xem lịch sử ứng tuyển" onclick="how_rep(this)">Lịch sử ứng tuyển?</a>
+                            </li>
+                        </ul>
+                    </div>  
+                </li>
+                <li class="ps-0 nav-item d-lg-none mt-2 mt-lg-0">
+                    <button data-bs-toggle="collapse" data-bs-target="#collap-user" id="btn-collap-user" class="border-0 bg-secondary-subtle p-0">
+                        <i class="bi bi-person text-pink align-text-top"></i>
+                        Xin chào <mark>Customer</mark>
+                        <i class="bi bi-arrow-bar-down align-text-top"></i>
+                    </button>
+                    <div id="collap-user" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="profile.html" class="text-dark text-decoration-none">Thông tin cá nhân</a>
+                            </li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a class="text-dark text-decoration-none" style="cursor: pointer;" onclick="window.open('createCv.html')">Tạo CV</a>
+                            </li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="index.html" id="signout1" class="text-dark text-decoration-none">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="d-none d-lg-flex">
+                <div class="dropdown">
+                    <img src="./static/img/sample.png" id="img" style="width: 50px;" type="button" aria-haspopup="true" aria-expanded="false" class="img-fluid border border-4 rounded-circle dropdown-toggle" data-bs-toggle="dropdown"></img>
+                    <ul class="dropdown-menu text-right dropdown-menu-end mt-1 border border-4">
+                        <li><h6 class="dropdown-header">Xin chào <mark class="username">Nguyen Van A</mark> </h6></li>
+                        <li><a class="dropdown-item" href="bs_profile.html">Profile</a></li>
+                        <li><a class="dropdown-item" href="recruit.html">Đăng tin tuyển dụng</a></li>
+                        <li><a class="dropdown-item" href="bs_history.html">Lịch Sử đăng bài/CV đã nhận</a></li>
+                        <li><a class="dropdown-item" id="signout" style="cursor: pointer;">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Negavation -->
+
+    <!-- Carousel -->
+    <!-- Hiển thị các slide hình ảnh -->
+    <div id="HP-carousel1" class="carousel slide carousel-fade z-0" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#HP-carousel1" data-bs-slide-to="0" class="active bg-pink-medium" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#HP-carousel1" data-bs-slide-to="1" class="bg-pink-medium" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#HP-carousel1" data-bs-slide-to="2" class="bg-pink-medium" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#HP-carousel1" data-bs-slide-to="3" class="bg-pink-medium" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#HP-carousel1" data-bs-slide-to="4" class="bg-pink-medium" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#HP-carousel1" data-bs-slide-to="5" class="bg-pink-medium" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#HP-carousel1" data-bs-slide-to="6" class="bg-pink-medium" aria-label="Slide 7"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="static/img/slide/slide1.jpg" class="d-block w-100 img-height-control" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="static/img/slide/slide2.jpg" class="d-block w-100 img-height-control" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="static/img/slide/slide3.jpg" class="d-block w-100 img-height-control" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="static/img/slide/slide4.jpg" class="d-block w-100 img-height-control" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="static/img/slide/slide5.jpg" class="d-block w-100 img-height-control" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="static/img/slide/slide6.jpg" class="d-block w-100 img-height-control" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="static/img/slide/slide7.jpg" class="d-block w-100 img-height-control" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev box-bg-hover-pink-strong-transit" type="button" data-bs-target="#HP-carousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next box-bg-hover-pink-strong-transit" type="button" data-bs-target="#HP-carousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End Carousel -->
+
+   <!-- Content -->
+   <!-- Phần nội dung chính -->
+    <div class="bg-linear-pink">
+        <div class="container">
+            <!-- Header -->
+            <div class="nav-container pt-4">
+                <form action="#">
+                    <h2>Tìm kiếm công việc</h2>
+                    <div class="row gy-2 justify-content-around">
+                        <div class="col-lg-7 col-md-12 mb-2">
+                            <input id="keysearch" class="form-control me-2 w-100 border-2 border-pink text-truncate box-shadow-2" type="text" placeholder="Điền tên ngành hoặc công ty...">
+                        </div>
+                        <div class="col-lg-3 col-12">
+                            <select class="form-select form-select mb-3 border-2 border-pink w-100 box-shadow-2 text-truncate" id="city" aria-label=".form-select" title="" required>
+                                <option id="tinh" value="" selected>Tỉnh thành bất kỳ</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <button type="submit" id="search" class="btn bg-pink w-100 text-truncat box-shadow-2 fw-bolder" data-bs-toggle="dropdown">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container mt-4">
+                <div class="row m-auto rounded ">
+                    <div class="col-12 bg-white text-dark rounded">
+                        <div class="row p-3 text-center">
+                            <div class="lead fw-bolder">Danh sách công việc đề xuất</div>
+                        </div>
+
+                        <div class="row jobs-list px-lg-3 px-md-2 g-3" id="root">
+                            <!-- Phần render các card loading đợi tải dữ liệu -->
+                            <!-- Phần hiển thị danh sách các bài đăng tuyển nhân sự -->              
+                        </div>
+
+                        <!-- Phần render phân Trang -->
+                        <nav aria-label="Page navigation" >
+                            <ul class="pagination justify-content-center mt-2" id="CT_Page"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Container-->
+            <!-- Hiển thị các ngành Hot -->
+            <div class="mt-5">
+                <h2 class="mb-3">Ngành Hot</h2>
+                <div class="pb-5">
+                    <!-- Carousel -->
+                    <div id="HP-carousel2" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Carousel Inner -->
+                        <div class="carousel-inner px-5">
+                            <div class="carousel-item active hotjobs-list" data-bs-interval="5000">
+                                <div class="row row-cols-lg-4 g-md-4 g-3 d-flex justify-content-around">
+                                    <div class="col-lg col-md-auto rounded p-lg-4 py-md-2 px-md-4 py-2 box-hover-pink2 box-bg-hover-pink-medium-transit">
+                                        <div class="d-flex align-items-center text-nowrap overflow-x-hidden text-dark">
+                                            <div class="box-hover-follow flex-shrink-0 d-none d-lg-flex me-3 bg-pink-medium rounded-circle justify-content-center align-items-center" style="width: 50px; height: 50px">
+                                                <i class="bi bi-briefcase-fill text-white" style="line-height: 50%;"></i>
+                                            </div>
+                                            <div class="flex-grow-1 text-align-control">
+                                                <p class="lead fw-bolder mb-0">Công nghệ thông tin</p>
+                                                <small>11.353 việc làm</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg col-md-auto rounded p-lg-4 py-md-2 px-md-4 py-2 box-hover-pink2 box-bg-hover-pink-medium-transit">
+                                        <div class="d-flex align-items-center text-nowrap overflow-x-hidden text-dark">
+                                            <div class="box-hover-follow flex-shrink-0 d-none d-lg-flex me-3 bg-pink-medium rounded-circle justify-content-center align-items-center" style="width: 50px; height: 50px">
+                                                <i class="bi bi-briefcase-fill text-white" style="line-height: 50%;"></i>
+                                            </div>
+                                            <div class="flex-grow-1 text-align-control">
+                                                <p class="lead fw-bolder mb-0">Tài chính ngân hàng</p>
+                                                <small>5.231 việc làm</small>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg col-md-auto rounded p-lg-4 py-md-2 px-md-4 py-2 box-hover-pink2 box-bg-hover-pink-medium-transit">
+                                        <div class="d-flex align-items-center text-nowrap overflow-x-hidden text-dark">
+                                            <div class="box-hover-follow flex-shrink-0 d-none d-lg-flex me-3 bg-pink-medium rounded-circle justify-content-center align-items-center" style="width: 50px; height: 50px">
+                                                <i class="bi bi-briefcase-fill text-white" style="line-height: 50%;"></i>
+                                            </div>
+                                            <div class="flex-grow-1 text-align-control">
+                                                <p class="lead fw-bolder mb-0">Tư vấn khách hàng</p>
+                                                <small>9.356 việc làm</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item hotjobs-list" data-bs-interval="5000">
+                                <div class="row row-cols-lg-4 g-md-4 g-3 d-flex justify-content-around">
+                                    <div class="col-lg col-md-auto rounded p-lg-4 py-md-2 px-md-4 py-2 box-hover-pink2 box-bg-hover-pink-medium-transit">
+                                        <div class="d-flex align-items-center text-nowrap overflow-x-hidden text-dark">
+                                            <div class="box-hover-follow flex-shrink-0 d-none d-lg-flex me-3 bg-pink-medium rounded-circle justify-content-center align-items-center" style="width: 50px; height: 50px">
+                                                <i class="bi bi-briefcase-fill text-white" style="line-height: 50%;"></i>
+                                            </div>
+                                            <div class="flex-grow-1 text-align-control">
+                                                <p class="lead fw-bolder mb-0">Truyền thông</p>
+                                                <small>7.963 việc làm</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-md-auto rounded p-lg-4 py-md-2 px-md-4 py-2 box-hover-pink2 box-bg-hover-pink-medium-transit">
+                                        <div class="d-flex align-items-center text-nowrap overflow-x-hidden text-dark">
+                                            <div class="box-hover-follow flex-shrink-0 d-none d-lg-flex me-3 bg-pink-medium rounded-circle justify-content-center align-items-center" style="width: 50px; height: 50px">
+                                                <i class="bi bi-briefcase-fill text-white" style="line-height: 50%;"></i>
+                                            </div>
+                                            <div class="flex-grow-1 text-align-control">
+                                                <p class="lead fw-bolder mb-0">Bất động sản</p>
+                                                <small>5.517 việc làm</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg col-md-auto rounded p-lg-4 py-md-2 px-md-4 py-2 box-hover-pink2 box-bg-hover-pink-medium-transit">
+                                        <div class="d-flex align-items-center text-nowrap overflow-x-hidden text-dark">
+                                            <div class="box-hover-follow flex-shrink-0 d-none d-lg-flex me-3 bg-pink-medium rounded-circle justify-content-center align-items-center" style="width: 50px; height: 50px">
+                                                <i class="bi bi-briefcase-fill text-white" style="line-height: 50%;"></i>
+                                            </div>
+                                            <div class="flex-grow-1 text-align-control">
+                                                <p class="lead fw-bolder mb-0">Du lịch</p>
+                                                <small>8.819 việc làm</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Carousel Inner -->
+                
+                        <!-- Left and right controls/icons -->
+                        <button class="carousel-control-prev bg-pink rounded-circle carousel-self-control" type="button" data-bs-target="#HP-carousel2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next bg-pink rounded-circle carousel-self-control" type="button" data-bs-target="#HP-carousel2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <!-- End Carousel -->
+                </div>
+            </div>
+            <!-- End Container Container -->
+        </div>
+        <!-- End Content -->
+    </div>
+    <!-- End Linear Pink -->
+
+    <!-- About us -->
+    <!-- PR web -->
+    <div class="container-fluid p-0 pt-2 p-md-5 bg-pink-light text-secondary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center display-5 fw-bolder text-pink">PecanCV</h2>
+                    <p class="font-italic text-center text-muted">
+                        Trang web PecanCV là một dịch vụ tìm kiếm việc làm cho các ứng viên và tuyển nhân sự cho các công ty tại Việt Nam,
+                        giúp tăng cơ hội có việc làm và nhân sự phù hợp với từng công ty. 
+                        Tìm kiếm nhân tài và thúc đẩy phát triển xã hội là sứ mệnh của chúng tôi.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row bg-white p-2 p-md-4 rounded box-shadow">
+                <div class="border p-0 rounded">
+                    <h3 class="rounded-top bg-pink-light font-italic text-pink px-4 py-1">Phía người dùng</h3>
+                    <div class="row row-cols-2 row-cols-md-3 d-flex px-3 m-auto">
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-person-fill-add"></i>
+                                8.000+
+                            </h4>
+                            <span class="small">Tài khoản mới mỗi tháng</span>
+                        </div>
+
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-person-check-fill"></i>
+                                3.000+
+                            </h4>
+                            <span class="small">Ứng viên được tuyển mỗi tháng</span>
+                        </div>
+
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-person-lines-fill"></i>
+                                15.000+
+                            </h4>
+                            <span class="small">Hồ sơ ứng tuyển mới mỗi tháng</span>
+                        </div>
+
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-briefcase-fill"></i>
+                                10.000+
+                            </h4>
+                            <span class="small">Công việc mới mỗi tháng</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border p-0 rounded mt-2 mt-md-5 mb-3 mb-md-0">
+                    <h3 class="rounded-top bg-pink-light font-italic text-pink px-4 py-1">Phía doanh nghiệp</h3>
+                    <div class="row row-cols-2 row-cols-md-3 d-flex px-3 m-auto">
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-building-fill-add"></i>
+                                1.000+
+                            </h4>
+                            <span class="small">Doanh nghiệp mới hợp tác mỗi tháng</span>
+                        </div>
+
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-building-fill-gear"></i>
+                                5.000+
+                            </h4>
+                            <span class="small">Doanh nghiệp sử dụng dịch vụ</span>
+                        </div>
+
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-building-fill-check"></i>
+                                25%
+                            </h4>
+                            <span class="small">Công ty có tầm ảnh hưởng lớn</span>
+                        </div>
+
+                        <div class="col py-3 box-hover-zoom-trans-short">
+                            <h4 class="text-warning fw-bolder fs-3">
+                                <i class="bi bi-mortarboard-fill"></i>
+                                20%
+                            </h4>
+                            <span class="small">Ứng viên đạt trình độ đại học/trên 1 năm kinh nghiệm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About us -->
+
+    <!-- Footer -->
+    <footer id="bottom" data-anchor="true" class="bg-pink o_footer">
+        <section class="s_text_block p-1 p-md-3">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-md-around">
+                    <div class="col-6 col-md-3">
+                        <ul class="list-group-item list-group-item-action list-control text-white">
+                            <h4>Về chúng tôi - PecanCV</h4>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="giới thiệu" onclick="how_rep(this)">Giới thiệu</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="tin tức nghề nghiệp" onclick="how_rep(this)">Tin tức nghề nghiệp</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="tuyển dụng" onclick="how_rep(this)">Tuyển dụng</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="liên hệ" onclick="how_rep(this)">Liên hệ</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="hỏi đáp" onclick="how_rep(this)">Hỏi đáp</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="chính sách bảo mậ" onclick="how_rep(this)">Chính sách bảo mật</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="điều khoản dịch vụ" onclick="how_rep(this)">Điều khoản dịch vụ</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#bottom" class="text-pink-light" value="quy chế hoạt động" onclick="how_rep(this)">Quy chế hoạt động</a></li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-5 border-start border-end text-center order-1 order-md-0">
+                        <div class="px-4 text-white">
+                            © 2023-2023 
+                            <p><b class="text-white">Công ty cổ phần PecanCV Việt Nam</b></p>
+                            <b class="text-decoration-underline text-pink-light">Trụ sở HCM:</b>
+                            <p class="font-italic text-pink-light">19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
+                            <b class="text-decoration-underline text-pink-light">Trụ sở Nha Trang:</b>
+                            <p class="font-italic text-pink-light">22 Đ. Nguyễn Đình Chiểu, Vĩnh Phước, Nha Trang, Vĩnh Phước</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3 text-right" id="connect">
+                        <div class="row">
+                            <h4 class="text-white">Thông tin liên hệ</h4>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-telephone-fill text-pink-light" name="mail">
+                                        <span class="strong ps-1 text-pink-light">84+ 123456789</span>  
+                                    </i>
+                                <li>
+                                    <i class="bi bi-mailbox2 text-pink-light" name="mail">
+                                        <span class="strong ps-1 text-pink-light">pecancv.support@gmail.com</span>  
+                                    </i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="include-icon d-flex justify-content-evenly">
+                                <a class="btn btn-link" href="https://www.facebook.com"><i class="bi bi-facebook fs-4 text-primary" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://github.com"><i class="bi bi-github text-dark fs-4" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://www.instagram.com"><i class="bi bi-instagram text-danger-emphasis fs-4" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://youtube.com"><i class="bi bi-youtube fs-4 text-danger" style="line-height: 50%;"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="row text-center mt-3">
+                            <span class="display-6 fs-2 fw-bolder text-pink-light"><i class="bi bi-briefcase-fill align-text-bottom me-1 text-pink-light"></i>PecanCV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Toast -->
+    <!-- Hiện thị thông báo cho người dùng -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 mb-4 me-1 mb-md-0 me-md-0" id="toast-root">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-briefcase-fill align-text-bottom me-1 text-pink-medium"></i>
+                <strong class="me-auto">Thông báo</strong>
+                <small class="fst-italic">Vừa mới</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toast-page">
+            </div>
+        </div>
+    </div>
+    <!-- End Toast -->
+    
+</body>
+<script src="static/js/homed.js"></script>
+<script src="../model/signoutModel.js"></script>
+<script src="../controller/searchJobController.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script type="text/javascript" src="static/js/rendercity.js"></script>
+<script type="module" src="../model/bshomedModel.js"></script>
+<script type="module" src="../model/renderJobModel.js"></script>
+<script type="module" src="../model/renderButtonModel.js" ></script>
+<script type="text/javascript" src="../controller/detailJobController.js"></script>
+<script type="text/javascript" src="../controller/buttonPageController.js" ></script>
+</html>
+<!-- Checked -->

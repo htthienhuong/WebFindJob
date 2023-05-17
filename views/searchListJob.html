@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="static/css/homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Negavation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a id="homepage" class="navbar-brand ms-4" style="cursor: pointer;" >
+                <span class="display-6 fs-2 fw-bolder text-pink-medium"><i class="bi bi-briefcase-fill align-text-top me-1"></i>PecanCV</span>
+            </a>       
+            <button class="navbar-toggler me-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item">
+                    <a class="nav-link active disabled fs-4 fw-bold" aria-current="page" href="#">Trang chủ</a>
+                </li>
+                <li class="ps-0 nav-item dropdown d-none d-lg-flex">
+                    <a class="btn ps-0 ps-lg-3 dropdown-toggle text-dark box-hover-opacity box-hover-zoom fs-4" id="NB_Tutorial-dropdown" type="button" data-mdb-toggle="dropdown" aria-expanded="false">Hướng dẫn</a>
+                    <ul class="dropdown-menu NB_Tutorial-dropdown-menu p-1" aria-labelledby="NB_Tutorial-dropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="ps-0 nav-item d-lg-none">
+                    <button data-bs-toggle="collapse" data-bs-target="#collap-tutorial" id="btn-collap-tutorial" class="border-0 bg-secondary-subtle p-0">
+                        <i class="bi bi-caret-right-fill text-pink align-text-bottom"></i>
+                        Hướng dẫn
+                        <i class="bi bi-arrow-bar-down align-text-bottom"></i>
+                    </button>
+                    <div id="collap-tutorial" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Hướng dẫn sử dụng?</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Xây dựng CV?</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Gửi đơn xét tuyển?</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark">Đăng bài tuyển dụng?</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ps-0 nav-item d-lg-none mt-2 mt-lg-0">
+                    <button data-bs-toggle="collapse" data-bs-target="#collap-user" id="btn-collap-user" class="border-0 bg-secondary-subtle p-0">
+                        <i class="bi bi-person text-pink align-text-bottom"></i>
+                        Xin chào <mark  class="username">Nguyen Van A</mark>
+                    </button>
+                    <div id="collap-user" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a id="signout1" class="text-dark">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="d-none d-lg-flex">
+                <div class="dropdown" id="inf">
+               
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Negavation -->
+
+    <!-- Content -->
+    <div class="bg-linear-pink">
+        <div class="container">
+            <!-- Header -->
+            <div class="nav-container pt-4">
+                <form action="#">
+                    <h2>Tìm kiếm công việc</h2>
+                    <div class="row gy-2 justify-content-around">
+                        <div class="col-lg-7 col-md-12 mb-2">
+                            <input id="keysearch" class="form-control me-2 w-100 border-2 border-pink text-truncate box-shadow-2" type="text" placeholder="Điền tên ngành hoặc công ty...">
+                        </div>
+                        <div class="col-lg-3 col-12">
+                            <select class="form-select form-select mb-3 border-2 border-pink w-100 box-shadow-2 text-truncate" id="city" aria-label=".form-select" title="" required>
+                                <option id="tinh" value="" selected>Chọn tỉnh thành</option>
+                                <option value="">Bất kỳ</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <button type="submit" id="search" class="btn bg-pink w-100 text-truncat box-shadow-2 fw-bolder" data-bs-toggle="dropdown">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container mt-4">
+                <div class="row m-auto rounded ">
+                    <div class="col-12 bg-white text-dark rounded">
+                        <div class="row p-3 text-center">
+                            <div class="lead fw-bolder">Danh sách công việc đề xuất</div>
+                        </div>
+
+                        <div class="row jobs-list px-lg-3 px-md-2 g-3" id="root">
+                            <!-- Phần render các card loading đợi tải dữ liệu -->
+                            <!-- Phần hiển thị danh sách các bài đăng tuyển nhân sự -->                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./static/js/userFunction.js"></script>
+    <script type="module" src="../views/static/js/homepage.js"></script>
+</body>
+<script type="module" src="../model/searchModel.js"></script>
+<script type="module" src="../model/detailJobModel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="../views/static/js/rendercity.js"></script>
+<script src="../views/static/js/renderholder.js"></script>
+<script src="../controller/detailJobController.js"></script>
+</html>
+

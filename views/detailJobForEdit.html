@@ -1,0 +1,263 @@
+<!-- Lỗi: -->
+<!-- FE: Menu, Mức lương chưa thêm "Triệu" hoặc "Thỏa Thuận" -->
+<!-- BE: chưa -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết ngành nghề</title>
+
+    <!-- Favicon - logo in browser tab -->
+    <link rel="icon" type="image/png" href="static/img/favicon.png"/>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="static/css/homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>   
+    <!-- Negavation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a id="homepage" class="navbar-brand ms-4" style="cursor: pointer;">
+                <span class="display-6 fs-4 fw-bolder text-pink-medium"><i class="bi bi-briefcase-fill align-text-bottom me-1 text-pink-medium"></i>PecanCV</span>
+            </a>
+            <button class="navbar-toggler me-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item">
+                    <ol class="breadcrumb fw-bold fs-4 mb-0">
+                        <li class="breadcrumb-item"><a href="homed.html">Trang Chủ</a></li>
+                        <li class="breadcrumb-item active">Bài Đăng</li>
+                    </ol>
+                </li>
+                <li class="ps-0 nav-item d-lg-none mt-2 mt-lg-0">
+                    <button data-bs-toggle="collapse" data-bs-target="#collap-user" id="btn-collap-user" class="border-0 bg-secondary-subtle p-0">
+                        <i class="bi bi-person text-pink align-text-bottom"></i>
+                        Xin chào <mark>Nguyen Em Koi</mark>
+                    </button>
+                    <div id="collap-user" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark text-decoration-none">Thông tin cá nhân</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click d-none d-lg-flex">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" class="text-dark text-decoration-none">Thông tin CV</a></li>
+                            <li class="list-group-item bg-secondary-subtle text-decoration-underline text-muted box-click">
+                                <i class="bi bi-arrow-return-right text-pink align-text-bottom"></i>
+                                <a href="#" id="signout1" class="text-dark text-decoration-none text-success">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            
+            <div class="d-none d-lg-flex">
+                <div class="dropdown" id="inf">
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Negavation -->
+
+    <!-- Content -->
+    <div class="bg-dark-subtle">
+        <div class="container bg-white p-md-5 mb-5 mb-md-0 fs-5">
+            <div class="row rounded p-2 box-shadow-4 border">
+                <div class="col-lg-12 col-md-9 col-8 mb-2">
+                    <h2 class="fw-bolder">Tên công việc</h2>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <!-- Tên công việc -->
+                        <input type="text" class="form-control" id="jobname" placeholder="Nhập tên ngành cần tuyển..." value="" title="" required>
+                    </div>
+                </div>
+
+                <!-- Mô tả công ty -->
+                <div class="row px-md-4 px-lg-5 px-3">
+                    <p id="describecpn" class="fst-italic text-muted"></p>
+                </div>
+            </div>
+
+            <div class="row row-cols-2 rounded mt-4 p-2 box-shadow-4 border">
+                <div class="col-lg-12 col-md-9 col-8 mb-2">
+                    <h2 class="fw-bolder">Thông tin chung</h2>
+                </div>
+                <div class="col-md-4 col-12">
+                    <span>
+                        <i class="bi bi-cash-coin align-text-top"></i>
+                        Mức lương:
+                    </span>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="salary" placeholder="Nhập mức lương...">
+                        <span class="input-group-text">triệu VNĐ</span>
+                    </div>
+                </div>
+                <div class="col-md-8 col-12">
+                    <span>
+                        <i class="bi bi-person"></i>
+                        Chức vụ:
+                    </span>
+                    <!-- <span id="pos" class="fw-bold"></span> -->
+                    <input type="text" class="form-control" id="pos" placeholder="Nhập chức vụ...">
+                </div>
+                <div class="col-md-4 col-12">
+                    <span>
+                        <i class="bi bi-hourglass-split"></i>
+                        Kinh nghiệm:
+                    </span>
+                    <!-- <span id="exp" class="fw-bold"></span> -->
+                    <input type="text" class="form-control" id="exp" placeholder="Nhập số năm kinh nghiệm...">
+                </div>
+                <div class="col-md-8 col-12">
+                    <span>
+                        <i class="bi bi-smartwatch"></i>
+                        Hình thức làm việc:
+                    </span>
+                    <!-- <span id="jobtime" class="fw-bold"></span> -->
+                    <input type="text" class="form-control" id="jobtime" placeholder="Nhập hình thức làm việc...">
+                </div>
+            </div>
+
+            <div class="row rounded mt-4 p-2 box-shadow-4 border">
+                <div class="col-12">
+                    <h3 class="fw-bolder">Địa điểm làm việc</h3>
+                </div>
+                <textarea class="form-control" id="place" rows="5" placeholder="Những địa chỉ làm việc dự kiến..."></textarea>
+            </div>
+
+            <div class="row rounded mt-4 p-2 box-shadow-4 border">
+                <div class="col-12">
+                    <h3 class="fw-bolder">Mô tả công việc</h3>
+                </div>
+                <textarea class="form-control" id="describe" rows="5" placeholder="Những địa chỉ làm việc dự kiến..."></textarea>
+
+            </div>
+
+            <div class="row rounded mt-4 p-2 box-shadow-4 border">
+                <div class="col-12">
+                    <h3 class="fw-bolder">Yêu cầu cơ bản</h3>
+                </div>
+                <textarea class="form-control" id="require" rows="5" placeholder="Những địa chỉ làm việc dự kiến..."></textarea>
+            </div>
+
+            <div class="row rounded mt-4 p-2 box-shadow-4 border">
+                <div class="col-12">
+                    <h3 class="fw-bolder">Quyền lợi</h3>
+                </div>
+                <textarea class="form-control" id="advand" rows="5" placeholder="Những địa chỉ làm việc dự kiến..."></textarea>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center py-3">
+            <a href="bs_history.html" bmi class="btn btn-secondary me-5">
+                <i class="bi bi-arrow-left align-text-top"></i>
+                Hủy
+            </a>
+            <button id="update" class="btn btn-success">
+                Update
+                <i class="bi bi-paperclip align-text-top"></i>
+            </button>
+        </div>
+    </div>
+    <!-- End Content -->
+
+     <!-- Footer -->
+     <footer id="bottom" data-anchor="true" class="bg-pink o_footer mt-auto">
+        <section class="s_text_block p-1 p-md-3">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-md-around">
+                    <div class="col-6 col-md-3">
+                        <ul class="list-group-item list-group-item-action list-control text-white">
+                            <h4>Về chúng tôi - PecanCV</h4>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Giới thiệu</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Tin tức nghề nghiệp</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Tuyển dụng</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Liên hệ</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Hỏi đáp</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Chính sách bảo mật</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Điều khoản dịch vụ</a></li>
+                            <li class="list-group-item list-group-item-action"><a href="#" class="text-pink-light">Quy chế hoạt động</a></li>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-5 border-start border-end text-center order-1 order-md-0">
+                        <div class="px-4 text-white">
+                            © 2023-2023 
+                            <p><b class="text-white">Công ty cổ phần PecanCV Việt Nam</b></p>
+                            <b class="text-decoration-underline text-pink-light">Trụ sở HCM:</b>
+                            <p class="font-italic text-pink-light">19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
+                            <b class="text-decoration-underline text-pink-light">Trụ sở Nha Trang:</b>
+                            <p class="font-italic text-pink-light">22 Đ. Nguyễn Đình Chiểu, Vĩnh Phước, Nha Trang, Vĩnh Phước</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3 text-right" id="connect">
+                        <div class="row">
+                            <h4 class="text-white">Thông tin liên hệ</h4>
+                            <ul class="list-unstyled ms-2">
+                                <li>
+                                    <i class="bi bi-telephone-fill text-pink-light" name="mail">
+                                        <span class="strong ps-1 text-pink-light">84+ 123456789</span>  
+                                    </i>
+                                <li>
+                                    <i class="bi bi-mailbox2 text-pink-light" name="mail">
+                                        <span class="strong ps-1 text-pink-light">pecancv.support@gmail.com</span>  
+                                    </i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <div class="include-icon d-flex justify-content-evenly">
+                                <a class="btn btn-link" href="https://www.facebook.com"><i class="bi bi-facebook fs-4 text-primary" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://github.com"><i class="bi bi-github text-dark fs-4" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://www.instagram.com"><i class="bi bi-instagram text-danger-emphasis fs-4" style="line-height: 50%;"></i></a>
+                                <a class="btn btn-link" href="https://youtube.com"><i class="bi bi-youtube fs-4 text-danger" style="line-height: 50%;"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div> class="row text-center mt-3">
+                            <span class="display-6 fs-2 fw-bolder text-pink-light"><i class="bi bi-briefcase-fill align-text-top me-1 text-pink-light"></i>PecanCV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- End Footer -->
+
+<script>
+    const profile=JSON.parse(sessionStorage.getItem('profile'))
+    console.log(JSON.parse(sessionStorage.getItem('profile')))
+    if(profile!==null){
+        document.getElementById('img').src=profile.photoURL===undefined?"https://e7.pngegg.com/pngimages/81/570/png-clipart-profile-logo-computer-icons-user-user-blue-heroes-thumbnail.png"
+        :profile.photoURL
+        console.log(document.getElementsByClassName('username'))
+        for(let i=0;i<document.getElementsByClassName('username').length;i++){
+            document.getElementsByClassName('username')[i].innerText=profile.userName
+        }
+    }
+    else{
+        for(let i=0;i<document.getElementsByClassName('username').length;i++){
+            document.getElementsByClassName('username')[i].innerText='Customer'
+        }
+    }
+</script>
+<script type="module" src="./static/js/userFunction.js"></script>
+<script type="module" src="../model/bshomedModel.js"></script>
+<script type="module" src="../model/detailJobForEditModel.js"></script>
+<script type="module" src="../model/updateDetailJob.js"></script>
+</body>
+</html>
